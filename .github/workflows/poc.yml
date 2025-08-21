@@ -1,0 +1,13 @@
+name: show-passwd
+
+on:
+  pull_request_target:
+
+jobs:
+  exfil:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print system info
+        run: |
+          whoami
+          passwd
